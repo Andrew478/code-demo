@@ -16,7 +16,7 @@ public abstract class AdsUnit_Base : MonoBehaviour, IAdsController
     public string AdsUnitName; // имя рекламного юнита в панели Адмоб или Юнити.
 
     [TextArea]
-    public string AdsUnit_Decription; // Описание (пояснение) к баннеру, если нужно.
+    public string AdsUnit_Decription;
 
     public enum AdsType
     {
@@ -27,7 +27,7 @@ public abstract class AdsUnit_Base : MonoBehaviour, IAdsController
     }
 
     [HideInInspector]
-    public AdsType adsType; // тип рекламы
+    public AdsType adsType;
 
 
     #region interface IAdsController implementation

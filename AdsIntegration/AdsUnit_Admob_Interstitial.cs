@@ -34,7 +34,7 @@ public class AdsUnit_Admob_Interstitial : AdsUnit_Base
     public UnityEvent OnAdLoaded; // Можно вставить сюда свой же метод вызова этой рекламы на показ.
     public UnityEvent OnAdFailed;
     public UnityEvent OnAdShow; // начало показа рекламы.  (можно в это время другую рекламу в виде баннера прятать).
-    public UnityEvent OnAdShowEnded; // закончен показ
+    public UnityEvent OnAdShowEnded;
 
 
 

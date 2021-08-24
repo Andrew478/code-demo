@@ -38,12 +38,12 @@ using UnityEngine.UI;
 public class Level_Loader : MonoBehaviour
 {
     [Header("Имя (индекс) сцены для загрузки.")]
-    string sceneToLoad_name = ""; // имя сцены для загрузки 
-    int sceneToLoad_index = 0; // идекс сцены для загрузки
+    string sceneToLoad_name = "";
+    int sceneToLoad_index = 0;
 
     [Space]
     
-    public GameObject AdsUnit; // GameObject рекламы. Для вызова показа рекламы. (должен реализовывать интерфейс IAdsController.
+    public GameObject AdsUnit; // GameObject рекламы. Для вызова показа рекламы. (должен реализовывать интерфейс IAdsController).
     IAdsController adsCTRL;
 
     enum SceneToLoad_nameType
@@ -56,12 +56,12 @@ public class Level_Loader : MonoBehaviour
 
 
     // Реклама
-    public bool ShowAdsWhileLoading = false; // Тип загрузки игрового уровня (показывать или нет рекламу перед загрузкой).
+    public bool ShowAdsWhileLoading = false; 
     
     // Загрузочный экран
-    public bool ShowLoadScreen = false; // Показывать загрузочный экран во время загрузки.
+    public bool ShowLoadScreen = false; 
     public float Time_beforeRealLoading = 0.1f; // Задержка перед началом загрузки. (Если в загрузочном экране надо что-то успеть показать).
-    public UnityEvent Show_LoadScreen; // Плашка загрузочного экрана. Тут либо вызывается скрипт переключения пункта меню на плашку, либо сам геймобъект (если игра проще).
+    public UnityEvent Show_LoadScreen; // Плашка загрузочного экрана. Тут либо вызывается скрипт переключения пункта меню на плашку, либо сам геймобъект.
 
     // Асинхронная или моментальная загрузка
     public enum LoadGameType
@@ -78,15 +78,15 @@ public class Level_Loader : MonoBehaviour
     public bool show_loadBar;
 
     // сами показатели (UI элементы)
-    public Text text_loadPercent; // процент загрузки
-    public Slider loadBar; // полоса загрузки
+    public Text text_loadPercent; 
+    public Slider loadBar; 
 
     [Space]
 
     [Header("Показ рекламы перед загрузкой с опред. шансом")]
-    public bool ShowAds_byChance = false; // показывать рекламу не в 100% случаев, а с вероятностью.
+    public bool ShowAds_byChance = false; 
 
-    [Range(1.0f, 99.0f)] // шанс от 1 до 99 %
+    [Range(1.0f, 99.0f)]
     public float ShowAds_chance = 99.0f;
 
 
